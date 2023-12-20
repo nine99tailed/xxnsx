@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Python
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
          registry: ghcr.io
          username: ${{ githab.actor }}
@@ -37,7 +37,6 @@ jobs:
        runs-on: ubuntu-latest
        
        steps:
-       - uses: actions/checkout@v3
        - run: docker compose up -d
  
       

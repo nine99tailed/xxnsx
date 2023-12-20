@@ -2,5 +2,6 @@ FROM python:alpine
 
 WORKDIR /app
 
-Copy main.py .
+COPY main.py .
+
 ENTRYPOINT ["python", "main.py"]

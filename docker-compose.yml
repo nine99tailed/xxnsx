@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   node:
-    image: 380node-app:1.0
+    image: ghcr.io/nine99tailed/380node-app:1.0
   python:
     image: ghcr.io/nine99tailed/380python-app:1.0
     restart: unless-stopped

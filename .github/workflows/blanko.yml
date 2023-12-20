@@ -25,14 +25,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
      - name: Python
        uses: docker/login-actions@v3
-        with:
+       with:
          registry: ghcr.io
          username: ${{ github.actor }}
          password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/nine99tailed/380-python-app:1.0 ./python
-      - run: docker push  ghcr.io/nine99tailed/380-python-app:1.0
-      - run: docker build -t ghcr.io/nine99tailed/380-node-app:1.0 ./node
-      - run: docker push  ghcr.io/nine99tailed/380-python-app:1.0
+     - run: docker build -t ghcr.io/nine99tailed/380-python-app:1.0 ./python
+     - run: docker push  ghcr.io/nine99tailed/380-python-app:1.0
+     - run: docker build -t ghcr.io/nine99tailed/380-node-app:1.0 ./node
+     - run: docker push  ghcr.io/nine99tailed/380-python-app:1.0
   deploy:
        runs-on: ubuntu-latest
        

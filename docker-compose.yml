@@ -4,6 +4,6 @@ services:
   node:
     image: 380node-app:1.0
   python:
-    image: 380python-app:1.0
+    image: ghcr.io/nine99tailed/380python-app:1.0
     restart: unless-stopped
     container_name: node-app

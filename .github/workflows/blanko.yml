@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
         with:
          registry: ghcr.io
-         username: ${{ githab.actor }}
+         username: ${{ github.actor }}
          password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/nine99tailed/380-python-app:1.0 ./python
       - run: docker push  ghcr.io/nine99tailed/380-python-app:1.0

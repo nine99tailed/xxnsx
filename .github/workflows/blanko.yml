@@ -42,7 +42,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: scp -o "StrictHostKeyChecking no" Docker-compose.yml 'nine99tailed-xxnsx-a967gb2kmct#SDSp6TASudcLErGTL.Wwx_1Ia2McX2aI@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io':/workspace/xxnsx
-      - run: ssh -o "StrictHostKeyChecking no" ssh 'nine99tailed-xxnsx-a967gb2kmct#SDSp6TASudcLErGTL.Wwx_1Ia2McX2aI@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io' "cd /workspace/xxnsx && docker compose pull && docker-compose up -d"
+      - run: ssh -o "StrictHostKeyChecking no" 'nine99tailed-xxnsx-a967gb2kmct#SDSp6TASudcLErGTL.Wwx_1Ia2McX2aI@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io' "cd /workspace/xxnsx && docker compose pull && docker-compose up -d"
       
       
       

@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+        node:
+                image: nodejs:latest
+  python:
+    image: python:latest
+                restart: unless-stopped
+                container_name: node-app

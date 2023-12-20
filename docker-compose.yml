@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   node:
-    image: nodejs:latest
+    image: 380node-app:1.0
   python:
-    image: python:latest
+    image: 380python-app:1.0
     restart: unless-stopped
     container_name: node-app

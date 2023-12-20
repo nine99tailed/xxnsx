@@ -41,13 +41,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - run: scp -o "StrictHostKeyChecking no" "nine99tailed-xxnsx-a967gb2kmct#SDSp6TASudcLErGTL.Wwx_1Ia2McX2aI@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io"  "docker-compose.yml:/workspace/xxnsx"  
-      - run: ssh -o "StrictHostKeyChecking no" "nine99tailed-xxnsx-a967gb2kmct#SDSp6TASudcLErGTL.Wwx_1Ia2McX2aI@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io" "cd /workspace/xxnsx && docker compose pull && docker-compose up -d"
-        
- 
- 
-      
+      - run: scp -o "StrictHostKeyChecking no" docker-compose.yml 'nine99tailed-xxnsx-a967gb2kmct@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io':/workspace/xxnsx
+      - run: ssh -o "StrictHostKeyChecking no" 'nine99tailed-xxnsx-a967gb2kmct@nine99tailed-xxnsx-a967gb2kmct.ssh.ws-eu107.gitpod.io' "cd /workspace/lastpara && docker compose pull && docker-compose up -d"
       
       
       

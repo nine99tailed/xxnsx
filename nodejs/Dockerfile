@@ -1,4 +1,4 @@
-FROM js:alpine
+FROM node:alpine
 WORKDIR /app
-COPY index.js
-ENTRYPOINT ["js", "index.js"]
+COPY index.js .
+ENTRYPOINT ["node", "index.js"]
